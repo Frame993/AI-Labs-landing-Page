@@ -1,2 +1,2 @@
 # AI-Labs-landing-Page
-Landing page 
+Landing page for a company leading the Ai products industry
