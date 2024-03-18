@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import heroImg from "../assets/hero.png";
+import { Image } from "astro:assets";
+---
+
+<Layout title="AI Labs">
+  <main>
+    <SectionContainer id="hero" className="grid grid-cols-2">
+      <div class="flex flex-col justify-center">
+        <h1>Automate. <br />Improve. <br /><span class="text-blue-500">Succeed.</span></h1>
+        <p>Elevate your company and thrive in the competitive landscape.</p>
+      </div>
+      <Image src={heroImg} alt="hero image" />
+    </SectionContainer>
+  </main>
+</Layout>
