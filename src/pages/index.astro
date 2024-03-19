@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import card01 from "../assets/card.png";
 import card02 from "../assets/cardTwo.png";
 import card03 from "../assets/cardThree.png";
 import genetativeNaptilus from "../assets/genetativeNaptilus.png";
+import animationImg from "../assets/animation.png";
 
 import icon01 from "../assets/icon01.png";
 import icon02 from "../assets/icon02.png";
@@ -22,7 +24,6 @@ import ColoredText from "../components/ColoredText.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Card from "../components/Card.astro";
 import Animation from "../components/Animation.astro";
-import { Image } from "astro:assets";
 import CardBenefits from "../components/CardBenefits.astro";
 import ContactForm from "../components/ContactForm.astro";
 ---
@@ -46,15 +47,20 @@ import ContactForm from "../components/ContactForm.astro";
           Elevate your company and thrive in the competitive landscape.
         </h4>
         <Hr width="80%" />
-        <Button className="w-fit">
-          <p>Get&nbsp;Started</p>
-          <Arrow />
-        </Button >
+        <a href="#contact">
+          <Button className="w-fit">
+            <p>Get&nbsp;Started</p>
+            <Arrow />
+          </Button>
+        </a>
       </div>
       <div
         class="flex items-center justify-center order-1 md:order-2 overflow-hidden w-[100%] h-[200px] md:h-full rounded-[24px]"
       >
-        <Animation className="flex items-center justify-center" />
+        <div class="w-full h-full md:hidden object-cover">
+          <Image src={animationImg} alt="Naptilus" />
+        </div>
+        <Animation className="items-center justify-center hidden md:flex" />
       </div>
     </SectionContainer>
     <SectionContainer id="offers" className="flex flex-col gap-8">
@@ -134,16 +140,16 @@ import ContactForm from "../components/ContactForm.astro";
     <SectionContainer id="contact" className="mb-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
         <div class="flex flex-col justify-between gap-y-4">
-         <div>
-          <SectionTitle
-          className="md:w-[90%]"
-          subtitle="Contact Us"
-          title="Elevate Your Business With AI."
-        />
-        <p class="text-white/50 md:w-[50%]">
-          Elevate your company and thrive in the competitive landscape.
-        </p>
-         </div>
+          <div>
+            <SectionTitle
+              className="md:w-[90%]"
+              subtitle="Contact Us"
+              title="Elevate Your Business With AI."
+            />
+            <p class="text-white/50 md:w-[50%]">
+              Elevate your company and thrive in the competitive landscape.
+            </p>
+          </div>
           <a href="mailto:info@napptilus.com"
             ><p class="text-white">info@napptilus.com</p></a
           >
