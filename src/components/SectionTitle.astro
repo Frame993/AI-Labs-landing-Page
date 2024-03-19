@@ -3,12 +3,14 @@ import SectionName from "./SectionName.astro";
 
 interface Props {
   title: string;
+  subtitle: string;
+  className?: string;
 }
 
-const { title } = Astro.props;
+const { title, subtitle, className } = Astro.props;
 ---
 
-<div class="mb-[32px]">
-  <SectionName>Automate</SectionName>
-  <h3>{title}</h3>
+<div class=`mb-[32px] ${className}`>
+  <SectionName>{subtitle}</SectionName>
+  <h3 class="text-pretty">{title}</h3>
 </div>

@@ -1,0 +1,22 @@
+---
+import Button from "./Button.astro";
+---
+<div class="bg-gradient-to-r from-blue-600 to-violet-600 rounded-[24px] p-[1px]">
+<div class="flex flex-col rounded-[24px] p-6 md:p-8 items-left bg-[#030210]">
+    <form class="flex flex-col">
+      <div class="flex flex-col mb-6"> 
+        <label class="text-white mb-2" for="text">Full Name</label>
+        <input class="text-white px-4 py-2 rounded-sm bg-white/5" type="text" placeholder="Jon Doe / Jane Doe"/>
+      </div>
+      <div class="flex flex-col mb-6">
+        <label class="text-white mb-2" for="text">Email</label>
+        <input class="text-white px-4 py-2 rounded-sm bg-white/5" type="text" placeholder="youremail@gmail.com"/>
+      </div>
+      <div class="flex flex-col mb-12">
+        <label class="text-white mb-2" for="text">Company</label>
+        <input class="text-white px-4 py-2 rounded-sm bg-white/5" type="text" placeholder="Company Name"/>
+      </div>
+      <Button handleClick={() => {}}>Submit</Button>
+    </form>
+</div>
+</div>

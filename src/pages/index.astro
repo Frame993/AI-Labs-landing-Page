@@ -1,9 +1,17 @@
 ---
-import heroImg from "../assets/hero.png";
-import { Image } from "astro:assets";
 import card01 from "../assets/card.png";
 import card02 from "../assets/cardTwo.png";
 import card03 from "../assets/cardThree.png";
+import genetativeNaptilus from "../assets/genetativeNaptilus.png";
+
+import icon01 from "../assets/icon01.png";
+import icon02 from "../assets/icon02.png";
+import icon03 from "../assets/icon03.png";
+import icon04 from "../assets/icon04.png";
+import icon05 from "../assets/icon05.png";
+import icon06 from "../assets/icon06.png";
+import icon07 from "../assets/icon07.png";
+import icon08 from "../assets/icon08.png";
 
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
@@ -13,32 +21,44 @@ import Hr from "../components/icons/HR.astro";
 import ColoredText from "../components/ColoredText.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Card from "../components/Card.astro";
+import Animation from "../components/Animation.astro";
+import { Image } from "astro:assets";
+import CardBenefits from "../components/CardBenefits.astro";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
 <Layout title="AI Labs">
   <main>
     <SectionContainer
       id="hero"
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 h-[90vh] items-center"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-[80vh] md:h-[90vh]"
     >
-      <div class="flex flex-col justify-center gap-y-10">
+      <div
+        class="flex flex-col justify-center gap-y-4 md:gap-y-10 order-2 md:order-1"
+      >
         <h1>
           Automate. <br />Improve. <br />
           <ColoredText>Succeed.</ColoredText>
         </h1>
-        <h4 class="text-white text-[25px] font-regular opacity-50">
+        <h4
+          class="text-white text-[18px] md:text-[24px] text-balance font-regular opacity-50"
+        >
           Elevate your company and thrive in the competitive landscape.
         </h4>
-        <Hr />
-        <Button>
+        <Hr width="80%" />
+        <Button className="w-fit">
           <p>Get&nbsp;Started</p>
           <Arrow />
-        </Button>
+        </Button >
       </div>
-      <Image src={heroImg} alt="World image" />
+      <div
+        class="flex items-center justify-center order-1 md:order-2 overflow-hidden w-[100%] h-[200px] md:h-full rounded-[24px]"
+      >
+        <Animation className="flex items-center justify-center" />
+      </div>
     </SectionContainer>
     <SectionContainer id="offers" className="flex flex-col gap-8">
-      <SectionTitle title="What We Offer." />
+      <SectionTitle title="What We Offer." subtitle="Automate" />
       <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card
           src={card01}
@@ -58,6 +78,77 @@ import Card from "../components/Card.astro";
           title="Versatile Learning from Varied Data"
           body="Generative AI, trained on diverse datasets, crafts adaptive content echoing the style and structure of the original data with remarkable depth and adaptability."
         />
+      </div>
+    </SectionContainer>
+    <SectionContainer id="benefits">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center mb-20">
+        <SectionTitle
+          subtitle="Improve"
+          title="Generative AI makes you stay ahead, elevate your company and thrive in the competitive landscape."
+        />
+        <Image src={genetativeNaptilus} alt="Naptilus" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <CardBenefits
+          icon={icon01}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon01"
+        />
+        <CardBenefits
+          icon={icon02}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon02"
+        />
+        <CardBenefits
+          icon={icon03}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon03"
+        />
+        <CardBenefits
+          icon={icon04}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon04"
+        />
+        <CardBenefits
+          icon={icon05}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon05"
+        />
+        <CardBenefits
+          icon={icon06}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon06"
+        />
+        <CardBenefits
+          icon={icon07}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon07"
+        />
+        <CardBenefits
+          icon={icon08}
+          body="Optimize content and increase online visibility"
+          alt="Content Icon08"
+        />
+      </div>
+    </SectionContainer>
+    <SectionContainer id="contact" className="mb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
+        <div class="flex flex-col justify-between gap-y-4">
+         <div>
+          <SectionTitle
+          className="md:w-[90%]"
+          subtitle="Contact Us"
+          title="Elevate Your Business With AI."
+        />
+        <p class="text-white/50 md:w-[50%]">
+          Elevate your company and thrive in the competitive landscape.
+        </p>
+         </div>
+          <a href="mailto:info@napptilus.com"
+            ><p class="text-white">info@napptilus.com</p></a
+          >
+        </div>
+        <ContactForm />
       </div>
     </SectionContainer>
   </main>

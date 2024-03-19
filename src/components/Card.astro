@@ -12,9 +12,9 @@ const { src, title, body, alt } = Astro.props;
 ---
 
 <div
-  class="flex items-center justify-start flex-col gap-y-4 bg-white/5 p-8 text-center rounded-[24px]"
+  class="flex items-center justify-start flex-col gap-y-4 bg-white/5 p-8 text-center rounded-[24px] hover:bg-white/10 transition-all"
 >
-  <Image src={src} alt={alt} height={200} />
+  <Image src={src} alt={alt} height={200} class="hover:scale-110 hover:rotate-6 transition-all" />
   <h4 class="text-white text-[24px] font-bold">
    {title}
   </h4>
